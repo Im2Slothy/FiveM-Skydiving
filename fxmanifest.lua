@@ -4,7 +4,7 @@
 version '1.0.0'
 author 'Im2Slothy#0 & TonyVee#0'
 description 'Time to go skydiving!'
-repository 'https://github.com/Im2Slothy/FiveM-Skydiving'
+repository 'https://github.com/Im2Slothy/FiveM-Plane-AutoPilot'
 
 -- compatibility wrapper
 fx_version 'adamant'
