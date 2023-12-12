@@ -36,10 +36,10 @@ Citizen.CreateThread(function()
         -- Create the marker on the map
         if not DoesBlipExist(marker) then
             marker = AddBlipForCoord(markerCoords.x, markerCoords.y, markerCoords.z)
-            SetBlipSprite(marker, 94) -- You can change the sprite to the desired one
+            SetBlipSprite(marker, 94) -- Skydive Blip
             SetBlipDisplay(marker, 2)
             SetBlipScale(marker, 1.0)
-            SetBlipColour(marker, 5) -- You can change the color as needed
+            SetBlipColour(marker, 5) -- Make the skydiving blip orange
             BeginTextCommandSetBlipName("STRING")
             AddTextComponentString("Fly Marker")
             EndTextCommandSetBlipName(marker)
