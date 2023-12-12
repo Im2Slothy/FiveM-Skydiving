@@ -37,7 +37,7 @@ Citizen.CreateThread(function()
             SetBlipSprite(marker, 94) -- You can change the sprite to the desired one
             SetBlipDisplay(marker, 2)
             SetBlipScale(marker, 1.0)
-            SetBlipColour(marker, 1) -- You can change the color as needed
+            SetBlipColour(marker, 5) -- You can change the color as needed
             BeginTextCommandSetBlipName("STRING")
             AddTextComponentString("Fly Marker")
             EndTextCommandSetBlipName(marker)
