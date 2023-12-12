@@ -36,10 +36,10 @@ Citizen.CreateThread(function()
         -- Create the marker on the map
         if not DoesBlipExist(marker) then
             marker = AddBlipForCoord(markerCoords.x, markerCoords.y, markerCoords.z)
-            SetBlipSprite(marker, 94) -- skydive blip
+            SetBlipSprite(marker, 94) -- You can change the sprite to the desired one
             SetBlipDisplay(marker, 2)
             SetBlipScale(marker, 1.0)
-            SetBlipColour(marker, 5) -- color orange for the skydive blip
+            SetBlipColour(marker, 5) -- You can change the color as needed
             BeginTextCommandSetBlipName("STRING")
             AddTextComponentString("Fly Marker")
             EndTextCommandSetBlipName(marker)
@@ -51,7 +51,7 @@ end)
 function DrawText3D(x, y, z, text)
     local onScreen, _x, _y = World3dToScreen2d(x, y, z)
     local px, py, pz = table.unpack(GetGameplayCamCoord())
-    local scale = 0.35
+    local scale = 0.5
 
     if onScreen then
         SetTextScale(scale, scale)
