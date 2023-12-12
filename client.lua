@@ -45,7 +45,7 @@ Citizen.CreateThread(function()
     end
 end)
 
--- Function to draw text in 3D space
+
 function DrawText3D(x, y, z, text)
     local onScreen, _x, _y = World3dToScreen2d(x, y, z)
     local px, py, pz = table.unpack(GetGameplayCamCoord())
