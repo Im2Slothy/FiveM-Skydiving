@@ -1,3 +1,5 @@
+-- Made by TonyVee#0 & Im2Slothy#0, contact for any issues!
+
 local markerCoords = vector3(-1164.45, -2789.79, 13.95)
 local marker = nil
 
@@ -9,17 +11,17 @@ Citizen.CreateThread(function()
         local playerCoords = GetEntityCoords(playerPed)
         local distance = Vdist(playerCoords.x, playerCoords.y, playerCoords.z, markerCoords.x, markerCoords.y, markerCoords.z)
 
-        if distance < 1.5 then
+        if distance < 5 then
             DrawText3D(markerCoords.x, markerCoords.y, markerCoords.z + 1.0, "~g~Press E to fly")
 
             if IsControlJustReleased(0, 38) then
                 GiveWeaponToPed(GetPlayerPed(-1), GetHashKey("gadget_parachute"), 1, false, false)
 				SetPedComponentVariation(GetPlayerPed(-1), 5, drawableId, textureId, 0)
-                local maxHeight = 2470.0 -- You can adjust this value to your liking
+                local maxHeight = 2470.0 -- max height the player will be dropped from
                 SetEntityCoordsNoOffset(playerPed, markerCoords.x, markerCoords.y, maxHeight, true, true, true)
                 SetEntityHeading(playerPed, 0.0)
 
-                -- Apply a vertical force to make the player start flying
+                -- vertical force to make the player start flying
                 SetEntityCoordsNoOffset(playerPed, markerCoords.x, markerCoords.y, maxHeight + 100.0, true, true, true)
                 SetEntityCoordsNoOffset(playerPed, markerCoords.x, markerCoords.y, maxHeight, true, true, true)
             end
@@ -34,10 +36,10 @@ Citizen.CreateThread(function()
         -- Create the marker on the map
         if not DoesBlipExist(marker) then
             marker = AddBlipForCoord(markerCoords.x, markerCoords.y, markerCoords.z)
-            SetBlipSprite(marker, 94) -- You can change the sprite to the desired one
+            SetBlipSprite(marker, 94) -- skydive blip
             SetBlipDisplay(marker, 2)
             SetBlipScale(marker, 1.0)
-            SetBlipColour(marker, 5) -- You can change the color as needed
+            SetBlipColour(marker, 5) -- color orange for the skydive blip
             BeginTextCommandSetBlipName("STRING")
             AddTextComponentString("Fly Marker")
             EndTextCommandSetBlipName(marker)
