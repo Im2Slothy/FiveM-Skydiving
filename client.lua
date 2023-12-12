@@ -9,7 +9,7 @@ Citizen.CreateThread(function()
         local playerCoords = GetEntityCoords(playerPed)
         local distance = Vdist(playerCoords.x, playerCoords.y, playerCoords.z, markerCoords.x, markerCoords.y, markerCoords.z)
 
-        if distance < 5.5 then
+        if distance < 10 then
             DrawText3D(markerCoords.x, markerCoords.y, markerCoords.z + 1.0, "~g~Press E to fly")
 
             if IsControlJustReleased(0, 38) then
