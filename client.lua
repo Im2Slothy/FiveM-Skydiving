@@ -34,7 +34,7 @@ Citizen.CreateThread(function()
         -- Create the marker on the map
         if not DoesBlipExist(marker) then
             marker = AddBlipForCoord(markerCoords.x, markerCoords.y, markerCoords.z)
-            SetBlipSprite(marker, 16) -- You can change the sprite to the desired one
+            SetBlipSprite(marker, 94) -- You can change the sprite to the desired one
             SetBlipDisplay(marker, 2)
             SetBlipScale(marker, 1.0)
             SetBlipColour(marker, 1) -- You can change the color as needed
